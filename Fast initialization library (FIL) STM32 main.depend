@@ -1,0 +1,42 @@
+# depslib dependency file v1.0
+1649227258 source:c:\users\caska\desktop\projects\rcr\fast initialization library (fil) stm32 main\src\startup_stm32f407xx.s
+
+1649227258 source:c:\users\caska\desktop\projects\rcr\fast initialization library (fil) stm32 main\src\system_stm32f4xx.c
+	"stm32f4xx.h"
+
+1649227258 c:\users\caska\desktop\projects\rcr\fast initialization library (fil) stm32 main\inc\stm32f4xx.h
+	"core_cm4.h"
+	"system_stm32f4xx.h"
+	<stdint.h>
+	"stm32f4xx_conf.h"
+
+1649227258 c:\users\caska\desktop\projects\rcr\fast initialization library (fil) stm32 main\cmsis\core_cm4.h
+	<stdint.h>
+	"cmsis_version.h"
+	"cmsis_compiler.h"
+	"mpu_armv7.h"
+
+1649227258 c:\users\caska\desktop\projects\rcr\fast initialization library (fil) stm32 main\cmsis\cmsis_version.h
+
+1649227258 c:\users\caska\desktop\projects\rcr\fast initialization library (fil) stm32 main\cmsis\cmsis_compiler.h
+	<stdint.h>
+	"cmsis_armcc.h"
+	"cmsis_armclang_ltm.h"
+	"cmsis_armclang.h"
+	"cmsis_gcc.h"
+	<cmsis_iccarm.h>
+	<cmsis_ccs.h>
+	<cmsis_csm.h>
+
+1649227258 c:\users\caska\desktop\projects\rcr\fast initialization library (fil) stm32 main\cmsis\cmsis_gcc.h
+
+1649227258 c:\users\caska\desktop\projects\rcr\fast initialization library (fil) stm32 main\cmsis\mpu_armv7.h
+
+1649227258 c:\users\caska\desktop\projects\rcr\fast initialization library (fil) stm32 main\inc\system_stm32f4xx.h
+
+1649227258 source:c:\users\caska\desktop\projects\rcr\fast initialization library (fil) stm32 main\src\main.c
+	"main.h"
+
+1649227258 c:\users\caska\desktop\projects\rcr\fast initialization library (fil) stm32 main\inc\main.h
+	"stm32f4xx.h"
+

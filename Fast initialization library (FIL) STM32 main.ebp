@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<EmBitz_project_file>
+	<EmBitzVersion release="2.30" revision="0" />
+	<FileVersion major="2" minor="0" />
+	<Project>
+		<Option title="Fast initialization library (FIL) STM32 main" />
+		<Option pch_mode="2" />
+		<Option compiler="armgcc_eb" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin\Debug\Fast initialization library (FIL) STM32 main.elf" />
+				<Option object_output="obj\Debug\" />
+				<Option type="0" />
+				<Option compiler="armgcc_eb" />
+				<Option projectDeviceOptionsRelation="0" />
+				<Compiler>
+					<Add option="-g2" />
+					<Add option="-O0" />
+					<Add option="-Wall" />
+					<Add option="-fdata-sections" />
+					<Add option="-ffunction-sections" />
+					<Add symbol="DEBUG_TARGET" />
+				</Compiler>
+				<Cpp>
+					<Add option="-g2" />
+					<Add option="-O0" />
+					<Add option="-Wall" />
+					<Add option="-fdata-sections" />
+					<Add option="-ffunction-sections" />
+				</Cpp>
+				<Assembler>
+					<Add option="-Wa,--gdwarf-2" />
+				</Assembler>
+				<Linker>
+					<Add option="-Wl,--gc-sections" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin\Release\Fast initialization library (FIL) STM32 main.elf" />
+				<Option object_output="obj\Release\" />
+				<Option type="0" />
+				<Option create_hex="1" />
+				<Option compiler="armgcc_eb" />
+				<Option projectDeviceOptionsRelation="0" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-g2" />
+					<Add option="-fdata-sections" />
+					<Add option="-ffunction-sections" />
+					<Add symbol="RELEASE_TARGET" />
+				</Compiler>
+				<Cpp>
+					<Add option="-O2" />
+					<Add option="-g2" />
+					<Add option="-fdata-sections" />
+					<Add option="-ffunction-sections" />
+				</Cpp>
+				<Assembler>
+					<Add option="-Wa,--no-warn" />
+				</Assembler>
+				<Linker>
+					<Add option="-Wl,--gc-sections" />
+					<Add option="-flto" />
+				</Linker>
+				<ExtraCommands>
+					<Add after='arm-none-eabi-objcopy -O binary &quot;$(TARGET_OUTPUT_DIR)\$(TARGET_OUTPUT_BASENAME).elf&quot; &quot;$(TARGET_OUTPUT_DIR)\$(TARGET_OUTPUT_BASENAME).bin&quot;' />
+					<Mode before="0" />
+					<Mode after="0" />
+				</ExtraCommands>
+			</Target>
+		</Build>
+		<Device>
+			<Add option="$device=cortex-m4" />
+			<Add option="$fpu=fpv4-sp-d16" />
+			<Add option="$stack=0x0100" />
+			<Add option="$heap=0x0000" />
+			<Add option="$lscript=./stm32f407vg_flash.ld" />
+		</Device>
+		<Compiler>
+			<Add option="-mfloat-abi=hard" />
+			<Add option="-fno-strict-aliasing" />
+			<Add symbol="ARM_MATH_CM4" />
+			<Add symbol="STM32F407_417" />
+			<Add symbol="STM32F407VG" />
+			<Add symbol="STM32F40_41xxx" />
+			<Add symbol="PROJECT_C" />
+			<Add directory=".\cmsis" />
+			<Add directory=".\inc" />
+			<Add directory=".\src" />
+		</Compiler>
+		<Cpp>
+			<Add option="-mfloat-abi=hard" />
+			<Add option="-fno-strict-aliasing" />
+		</Cpp>
+		<Linker>
+			<Add option="-eb_start_files" />
+			<Add option="-eb_lib=n" />
+		</Linker>
+		<Unit filename="cmsis\cmsis_compiler.h" />
+		<Unit filename="cmsis\cmsis_gcc.h" />
+		<Unit filename="cmsis\cmsis_version.h" />
+		<Unit filename="cmsis\core_cm4.h" />
+		<Unit filename="cmsis\mpu_armv7.h" />
+		<Unit filename="cmsis\mpu_armv8.h" />
+		<Unit filename="cmsis\tz_context.h" />
+		<Unit filename="FIL lib\FilConfig.h" />
+		<Unit filename="FIL lib\TIM.h" />
+		<Unit filename="inc\main.h" />
+		<Unit filename="inc\stm32f4xx.h" />
+		<Unit filename="inc\system_stm32f4xx.h" />
+		<Unit filename="src\main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\startup_stm32f407xx.S">
+			<Option compilerVar="CC" />
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="src\system_stm32f4xx.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F407.svd" />
+		<Unit filename="stm32f407vg_flash.ld" />
+		<Extensions>
+			<code_completion />
+			<debugger>
+				<target_debugging_settings target="Debug">
+					<debug_interface description="STM32F407.svd" options="2" reg_filter="0" probe="stlink" device="stm32-auto" speed="" bus_address="" serial="" defines="" scripts="" flash_size="" ram_size="" vcc_voltage="" verbose="4" unwind="2" rstType="0" use_jtag="false" disable_cache="false" enable_semi="false" close_eblink="false" gdb_reset="" gdb_reset_remote="reset" gdb_before_conn="" gdb_after_conn="" use_remote="false" ip_address="" ip_port="" path="" executable="" start_server="false" arguments="" flash_verify="false" flash_run="false" />
+				</target_debugging_settings>
+				<target_debugging_settings target="Release">
+					<debug_interface description="STM32F407.svd" options="2" reg_filter="0" probe="stlink" device="stm32-auto" speed="" bus_address="" serial="" defines="" scripts="" flash_size="" ram_size="" vcc_voltage="" verbose="4" unwind="2" rstType="0" use_jtag="false" disable_cache="false" enable_semi="false" close_eblink="false" gdb_reset="" gdb_reset_remote="reset" gdb_before_conn="" gdb_after_conn="" use_remote="false" ip_address="" ip_port="" path="" executable="" start_server="false" arguments="" flash_verify="false" flash_run="false" />
+				</target_debugging_settings>
+			</debugger>
+			<envvars />
+		</Extensions>
+	</Project>
+</EmBitz_project_file>
